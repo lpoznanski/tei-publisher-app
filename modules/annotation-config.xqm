@@ -16,6 +16,8 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
     switch ($type)
         case "person" return
             <persName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</persName>
+        case "forename" return
+            <forename xmlns="http://www.tei-c.org/ns/1.0">{$content()}</forename>
         case "place" return
             <placeName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</placeName>
         case "term" return
